@@ -6,6 +6,7 @@ function loginSuccessful() {
     username.innerHTML = currentAccount.user;
     loginSection.classList.add("d-none");
     menuSection.classList.remove("d-none");
+    userTestSection.classList.add("d-none");
 }
 
 
@@ -13,6 +14,7 @@ function loginSuccessful() {
 function closeSession() {
     menuSection.classList.add("d-none");
     loginSection.classList.remove("d-none");
+    userTestSection.classList.remove("d-none");
 }
 
 

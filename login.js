@@ -8,6 +8,7 @@ const accounts = [
 ];
 let currentAccount;
 const userList = document.getElementById("user_list");
+const userTestSection = document.getElementById("user-test-section");
 
 
 function validate(user, password) {
@@ -55,3 +56,4 @@ for(let i = 0; i < accounts.length; i++) {
     userList.appendChild(li);
     // userList.innerHTML += `${accounts[i].user} - ${accounts[i].password}`;
 }
+

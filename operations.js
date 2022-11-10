@@ -54,7 +54,7 @@ function amountAction(){
             else {
                 currentAccount.balance += amount;
                 currentBalance.innerHTML = format(currentAccount.balance, 2);
-                amountMessage = `Monto Ingresado: $${amount}`;
+                amountMessage = `Monto Ingresado: $${format(amount, 2)}`;
             }
         }
         else if (amountButton.innerHTML == "Retirar"){
@@ -64,7 +64,7 @@ function amountAction(){
             else {
                 currentAccount.balance -= amount;
                 currentBalance.innerHTML = format(currentAccount.balance, 2);
-                amountMessage = `Monto Retirado: $${amount}`;
+                amountMessage = `Monto Retirado: $${format(amount, 2)}`;
             }
         }
     }
