@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ATM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body class="d-flex align-items-center min-vh-100">
+    <div id="wrapper" class="w-100">
+      <section id="login-section" class="container w-50 border">
+        <div class="row">
+            <div class="col bg-dark border">
+                <h1 class="text-center m-0 py-3 text-light">CAJERO AUTOMÁTICO</h1>
+            </div>
+        </div>
+        <div class="row bg-white d-flex justify-content-center">
+            <div class="col-12 col-sm-10 col-md-8 col-lg-6 d-flex flex-column align-items-center">
+              <h5 class="my-2 text-secondary text-center">INGRESE SUS CREDENCIALES</h5>
+              <form id="form" class="d-flex flex-column align-items-center w-100">
+                <div class="my-2 w-100">
+                  <input id="user" class="form-control w-100" type="text" required placeholder="Nombre de Usuario">
+                </div>
+                <div class="my-2 w-100">
+                  <input id="password" class="form-control w-100" type="password" required placeholder="Contraseña">
+                </div>
+                <button type="submit" class="my-3 px-3 btn btn-dark btn-lg">Ingresar</button>
+              </form>
+            </div>
+        </div>
+      </section>
+      <section id="menu-section" class="container w-50 border">
+        <div class="row">
+            <div class="col bg-dark border">
+                <h5 class="text-center m-0 py-2 text-light">CAJERO AUTOMÁTICO</h4>
+                <h6 class="text-center m-0 pb-2 text-white">Seleccione la Operación</h5>
+            </div>
+        </div>
+        <div class="row bg-white d-flex justify-content-center">
+            <div class="col-10 col-md-8 col-lg-6 d-flex flex-column align-items-center">
+              <h5 class="my-2 text-secondary">Bienvenid@: <span id="welcome_user"></span></h5>
+              <button class="my-2 px-2 btn btn-secondary btn-md w-100" onclick="showBalance()">Consultar Saldo</button>
+              <button class="my-2 px-2 btn btn-secondary btn-md w-100" onclick="showDeposit()">Ingresar Monto</button>
+              <button class="my-2 px-2 btn btn-secondary btn-md w-100" onclick="showWithdraw()">Retirar Monto</button>
+              <button class="mt-2 mb-3 px-2 btn btn-secondary btn-md w-100" onclick="closeSession()">Cerrar Sesión</button>
+            </div>
+        </div>
+      </section>
+      <section id="operations-section" class="container w-50 border">
+        <div class="row">
+            <div class="col bg-dark border">
+                <h5 class="text-center m-0 py-2 text-light">CAJERO AUTOMÁTICO</h4>
+                <h6 id="operations-title" class="text-center m-0 pb-2 text-white">Consultar Saldo</h5>
+            </div>
+        </div>
+        <div class="row bg-white d-flex justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-6 d-flex flex-column align-items-center">
+              <h5 class="mt-2 mb-0 text-secondary">Cuenta: <span id="operations_user"></span></h5>
+              <p class="my-2">Saldo Actual: $<span id="current-balance"></span></p>
+              <div id="amount-container" class="d-flex flex-column flex-md-row align-items-center w-100 mb-md-4">
+                <input id="amount" class="form-control w-75 me-md-2" type="text" required placeholder="Monto">
+                <button class="mt-3 mb-4 m-md-0 px-3 btn btn-secondary btn-md" id="amount-button" onclick="amountAction()">Ingresar</button>
+              </div>
+              <button class="mb-3 px-5 btn btn-dark btn-md w-75" onclick="returnButton()">Regresar </button>
+            </div>
+        </div>
+      </section>
+      <section class="fixed-bottom w-50 bg-dark text-light m-3 d-none">
+        <p class="ms-3 mt-2 ">Usuarios para pruebas: </p>
+        <ul id="user_list"></ul>
+      </section>
+    </div>
+    <a id="attribution-link" class="position-fixed bottom-0 end-0" href="https://www.vecteezy.com/" target="_blank">Background Image by vecteezy.com</a>
+    <script src="./login.js"></script>
+    <script src="./menu.js"></script>
+    <script src="./operations.js"></script>
+  </body>
+</html>
+

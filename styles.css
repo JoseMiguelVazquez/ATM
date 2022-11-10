@@ -1,0 +1,11 @@
+body {
+    background-image: url("./1993.jpg");
+}
+
+#attribution-link {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: grey;
+}
+
+
