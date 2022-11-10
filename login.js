@@ -36,7 +36,7 @@ function validate(user, password) {
         }
     }
     if(error) {
-        alert(message);
+        swal(message);
     }
 
 }
@@ -55,4 +55,3 @@ for(let i = 0; i < accounts.length; i++) {
     userList.appendChild(li);
     // userList.innerHTML += `${accounts[i].user} - ${accounts[i].password}`;
 }
-

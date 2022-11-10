@@ -69,7 +69,7 @@ function amountAction(){
         }
     }
     amountInput.value = "";
-    alert(amountMessage);
+    swal(amountMessage);
 }
 
 const format = (num, decimals) => num.toLocaleString('en-US', {
