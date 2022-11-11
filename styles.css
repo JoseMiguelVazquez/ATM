@@ -14,8 +14,6 @@ body {
 
 .swal-modal {
   border: 3px solid rgb(197, 197, 197);
-  position: relative;
-  bottom: 250px;
 }
 
 .swal-button {
@@ -24,4 +22,8 @@ body {
 
 .swal-button:hover {
     background-color: rgb(54, 54, 54) !important;
+}
+
+#login-section, #menu-section, #operations-section {
+    height: 350px;
 }
