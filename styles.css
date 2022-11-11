@@ -31,3 +31,25 @@ body {
 #show-hide-eye {
     cursor: pointer;
 }
+
+#user-test-section {
+    font-size: 0.7rem;
+}
+
+@media screen and (min-width: 576px) {
+    #user-test-section {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #user-test-section {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #user-test-section {
+        font-size: 1rem;
+    }
+}

@@ -3,8 +3,7 @@ const loginSection = document.getElementById("login-section");
 const accounts = [
     {user: "Miguel", password: "123", balance: 200.00},
     {user: "Rosa", password: "456", balance: 400.00},
-    {user: "Grace", password: "789", balance: 600.00},
-    {user: "Raul", password: "111", balance: 450.00}
+    {user: "Grace", password: "789", balance: 600.00}
 ];
 let user = document.getElementById("user");
 let password = document.getElementById("password");
