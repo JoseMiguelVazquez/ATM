@@ -6,6 +6,10 @@ const accounts = [
     {user: "Grace", password: "789", balance: 600.00},
     {user: "Raul", password: "111", balance: 450.00}
 ];
+let user = document.getElementById("user");
+let password = document.getElementById("password");
+let showEye = document.getElementById("show-eye");
+let hideEye = document.getElementById("hide-eye");
 let currentAccount;
 const userList = document.getElementById("user_list");
 const userTestSection = document.getElementById("user-test-section");
@@ -44,8 +48,8 @@ function validate(user, password) {
 
 form.addEventListener("submit", (event) =>{
     event.preventDefault();
-    let us = document.getElementById("user").value;
-    let pass = document.getElementById("password").value;
+    let us = user.value;
+    let pass = password.value;
     validate(us, pass);
 });
 
@@ -57,3 +61,16 @@ for(let i = 0; i < accounts.length; i++) {
     // userList.innerHTML += `${accounts[i].user} - ${accounts[i].password}`;
 }
 
+function passwordShowHide() {
+    hideEye.classList.remove("d-none");
+    if(password.type === "password") {
+        password.type = "text";
+        showEye.style.display = "none";
+        hideEye.style.display = "block";
+    }
+    else {
+        password.type = "password";
+        showEye.style.display = "block";
+        hideEye.style.display = "none";
+    }
+}

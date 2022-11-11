@@ -15,6 +15,11 @@ function closeSession() {
     menuSection.classList.add("d-none");
     loginSection.classList.remove("d-none");
     userTestSection.classList.remove("d-none");
+    if(password.type === "text") {
+        password.type = "password";
+        showEye.style.display = "block";
+        hideEye.style.display = "none";
+    }
 }
 
 

@@ -27,3 +27,7 @@ body {
 #login-section, #menu-section, #operations-section {
     height: 350px;
 }
+
+#show-hide-eye {
+    cursor: pointer;
+}
